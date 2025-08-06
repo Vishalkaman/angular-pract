@@ -1,0 +1,17 @@
+<nz-list-item class="bg-gray-50 rounded-lg p-3 shadow-sm mb-2" >
+  <div class="flex items-center w-full">
+    <label nz-checkbox
+      [nzChecked]="todo.completed" (click)="onCheckboxChange()"
+    >
+    </label>
+    <span
+      class="ml-4 text-lg"
+      [ngClass]="{
+      'line-through text-gray-400': todo.completed,
+      'text-gray-800': !todo.completed
+      }"
+    >
+      {{ todo.title }}
+    </span>
+  </div>
+</nz-list-item>

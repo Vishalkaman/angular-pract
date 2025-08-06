@@ -1,0 +1,19 @@
+<div class="p-6">
+  <nz-card nzTitle="My To-Do List">
+    <div *ngIf="todos.length === 0; else todoList">
+      <p class="text-center text-gray-500">No to-do items found.</p>
+    </div>
+    <ng-template #todoList>
+      <nz-list [nzDataSource]="todos" [nzRenderItem]="itemTemplate">
+        <ng-template #itemTemplate let-todo>
+          <nz-list-item>
+            <app-todo-item
+              [todo]="todo"
+              (todoCompleted)="onTodoCompleted($event)">
+            </app-todo-item>
+          </nz-list-item>
+        </ng-template>
+      </nz-list>
+    </ng-template>
+  </nz-card>
+</div>
