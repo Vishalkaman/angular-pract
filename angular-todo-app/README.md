@@ -32,4 +32,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 1. Create todo module with todo routing module
 2. Create components for todo list and todo item
 3. Create service for todo list
-4. Connect todo list and todo item components with service
+4. Connect todo list and todo item components with servic
